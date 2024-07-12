@@ -29,7 +29,7 @@ export const config = {
 };
 
 export default async function middleware(req: NextRequest) {
-k  const { profile, experiences } = await sendPageEvent({
+  const { profile, experiences } = await sendPageEvent({
     ctx: createRequestContext(req),
     clientId: process.env.NEXT_PUBLIC_NINETAILED_CLIENT_ID || '',
     environment: process.env.NEXT_PUBLIC_NINETAILED_ENVIRONMENT || '',
