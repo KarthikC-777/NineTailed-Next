@@ -29,15 +29,7 @@ export const config = {
 };
 
 export default async function middleware(req: NextRequest) {
-  console.log(' -------------------------------------------------');
-  console.log('file: middleware.ts:33 -> middleware -> req:', req);
-  console.log(' -------------------------------------------------');
-
-  console.log(req?.headers['x-forwarded-for']);
-  console.log(req?.headers['x-real-ip']);
-
-  console.log('request', req.url);
-  const { profile, experiences } = await sendPageEvent({
+k  const { profile, experiences } = await sendPageEvent({
     ctx: createRequestContext(req),
     clientId: process.env.NEXT_PUBLIC_NINETAILED_CLIENT_ID || '',
     environment: process.env.NEXT_PUBLIC_NINETAILED_ENVIRONMENT || '',
@@ -51,7 +43,7 @@ export default async function middleware(req: NextRequest) {
     },
   });
 
-  console.log('profile', profile);
+  console.warn('profile', profile);
 
   const experienceSelections = encodeExperienceSelections(experiences);
 

@@ -81,17 +81,6 @@ export const BlockRenderer = ({ block }: { block: singularOrArrayBlock }) => {
   const { id } = block.sys;
   const contentTypeId = get(block, 'sys.contentType.sys.id') as string;
 
-  console.log(
-    ' ----------------------------------------------------------------------------'
-  );
-  console.log(
-    'file: BlockRenderer.tsx:84 -> BlockRenderer -> contentTypeId:',
-    contentTypeId
-  );
-  console.log(
-    ' ----------------------------------------------------------------------------'
-  );
-
   return (
     <ServerExperience
       {...block}
