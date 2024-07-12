@@ -1,6 +1,5 @@
 [build]
   node_version = "18"
-  command = "npm run build"
   publish = ".next"
 [[redirects]]
   from = "/*"
